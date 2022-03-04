@@ -34,20 +34,20 @@
                     <div class="panel-body">
                         @using (Html.BeginForm("Index", "Login", FormMethod.Post))
                         {
-                            @Html.ValidationSummary(false, "", new { @class = "text-danger" });
-                            <fieldset>
-                                <div class="form-group">
-                                    @Html.TextBoxFor(model => model.Account, new { @class = "form-control", @autofocus = "autofocus" })
-                                </div>
-                                <div class="form-group">
-                                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <button type="submit" class="btn btn-lg btn-success btn-block">Log in</button>
-                            </fieldset>
-                        }
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" });
+            <fieldset>
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Account, new { @class = "form-control", @autofocus = "autofocus" })
+                </div>
+                <div class="form-group">
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                </div>
+                <!-- Change this to a button or input when using this as a form -->
+                <button type="submit" class="btn btn-lg btn-success btn-block">Log in</button>
+            </fieldset>}
                     </div>
                 </div>
+                <button type="submit"><a href="/Home/Index" class="btn btn-lg btn-success btn-block">Back<i class="fa fa-angle-right"></i></a></button>
             </div>
         </div>
     </div>
