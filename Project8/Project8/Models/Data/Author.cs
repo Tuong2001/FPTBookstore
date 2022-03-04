@@ -28,11 +28,11 @@
         [Display(Name = "Hometown")]
         public string Hometown { get; set; }
 
-        [Column(TypeName = "smalldatetime")]
+        [Column(TypeName = "datetime")]
         [Display(Name = "DateOfBirth")]
         public DateTime? DateOfBirth { get; set; }
 
-        [Column(TypeName = "smalldatetime")]
+        [Column(TypeName = "datetime")]
         [Display(Name = "DateOfDeath")]
         public DateTime? DateOfDeath { get; set; }
 
