@@ -434,7 +434,7 @@ namespace FPTBookstore.Models.Process
         /// </summary>
         /// <param name="id">int</param>
         /// <returns>bool</returns>
-        public bool deleteContact(int id)
+        public bool DeleteFeedBack(int id)
         {
             try
             {
@@ -481,6 +481,39 @@ namespace FPTBookstore.Models.Process
                 return false;
             }
         }
+
+        #region Customer Order
+
+        /// <summary>
+        /// function to get a list of order from customers
+        /// </summary>
+        /// <returns>List</returns>
+        public List<Order> ShowListOrder()
+        {
+            return db.Orders.OrderBy(x => x.OrderID).ToList();
+        }
+
+        /// <summary>
+        /// function to delete customer order
+        /// </summary>
+        /// <param name="id">int</param>
+        /// <returns>bool</returns>
+        public bool DeleteOrder(int id)
+        {
+            try
+            {
+                var order = db.Orders.Find(id);
+                db.Orders.Remove(order);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        #endregion
 
     }
 }

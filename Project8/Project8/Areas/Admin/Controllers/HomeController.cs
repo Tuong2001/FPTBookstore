@@ -535,7 +535,7 @@ namespace FPTBookstore.Areas.Admin.Controllers
         [HttpDelete]
         public ActionResult DeleteFeedBack(int id)
         {
-            new AdminProcess().deleteContact(id);
+            new AdminProcess().DeleteFeedBack(id);
 
             return RedirectToAction("FeedBack");
         }
@@ -587,6 +587,15 @@ namespace FPTBookstore.Areas.Admin.Controllers
             var result = new OderDetailProcess().ListDetail(id);
 
             return View(result);
+        }
+
+        //DELETE : Admin/Home/DeleteOrder/:id : delete customer order
+        [HttpDelete]
+        public ActionResult DeleteOrder(int id)
+        {
+            new AdminProcess().DeleteOrder(id);
+
+            return RedirectToAction("Order");
         }
 
         #endregion
