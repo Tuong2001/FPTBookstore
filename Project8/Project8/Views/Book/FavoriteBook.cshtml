@@ -9,7 +9,7 @@
             </a>
             <div class="caption">
                 <h4>
-                    <a title="@item.BookName" href="/Book/Details/@item.BookID" style="color:green;">@(item.BookName.Length > 26 ? item.BookName.Substring(0, 22) + "..." : item.BookName)</a>
+                    <a title="@item.BookName" href="/Book/Details/@item.BookID" style="color:#087BB0;">@(item.BookName.Length > 26 ? item.BookName.Substring(0, 22) + "..." : item.BookName)</a>
                 </h4>
                 <a class="btn btn-warning" href="/Cart/AddItem/?id=@item.BookID&quantity=1">Buying product</a>
                 @if (item.Price > 0)

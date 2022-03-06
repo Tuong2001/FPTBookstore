@@ -7,12 +7,12 @@
 }
 
 <div class="row">
-    <div class="col-md-3">
-        <p class="lead">Product Category</p>
+    <div class="col-md-3" style="border-radius: 26px;border: 1px solid #dea3a3;   background-image: linear-gradient(to top, #B0C4DE 0%, #ADD8E6 100%);">
+        <p style="text-align: center; margin: 5px;font-size: 25px;font-weight: 600;"><font style="color:#525151;"> Book category</font></p>
         @Html.Action("ShowCategory", "Home")
     </div>
     <div class="col-md-9">
-        <h3>All books</h3>
+        <h3><font style="color:#087BB0">All books</font></h3>
         <hr />
         <div class="row">
             @foreach (var item in Model)
@@ -24,7 +24,7 @@
                         </a>
                         <div class="caption">
                             <h4>
-                                <a title="@item.BookName" href="/Book/Details/@item.BookID" style="color:green;">@(item.BookName.Length > 26 ? item.BookName.Substring(0, 22) + "..." : item.BookName)</a>
+                                <a title="@item.BookName" href="/Book/Details/@item.BookID" style="color:#087BB0;">@(item.BookName.Length > 26 ? item.BookName.Substring(0, 22) + "..." : item.BookName)</a>
                             </h4>
                             <a class="btn btn-warning" href="/Cart/AddItem/?id=@item.BookID&quantity=1">Buying product</a>
                             @if (item.Price > 0)
