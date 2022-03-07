@@ -4,9 +4,9 @@
     @if (Session["User"] == null)
     {       
             
-        <li><a href="/User/Register" style="color: #525151;"> Register</a></li>
+        <li><a href="/User/Register" style="color: #525151;"><i class="fa fa-pencil" aria-hidden="true" style="color:#525151"></i> Register</a></li>
             <li class="dropdown">
-                <a href="/User/Login" style="color: #525151; background:none" class="dropdown-toggle" data-toggle="dropdown"> Log in <b class="caret"></b></a>
+                <a href="/User/Login" style="color: #525151; background:none" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-pencil" aria-hidden="true" style="color:#525151"></i> Log in <b class="caret"></b></a>
                 <ul class="dropdown-menu" style="padding: 15px;min-width: 250px">
                     <li>
                         <div class="row">
@@ -37,21 +37,21 @@
                 </ul>
             </li>
             <li>
-                <a href="/Admin/Login"><i class="fa fa-user-secret" aria-hidden="true" style="color: #525151;"></i></a>
+                <a href="/Admin/Login"><i class="fa fa-user" aria-hidden="true" style="color: #525151;"></i></a>
             </li>
             @Html.Action("CartHeader", "Cart")
     }
     else
     {
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user-o" aria-hidden="true"></i> Account : @Session["User"] <i class="fa fa-caret-down"></i>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"style="background-image: linear-gradient(to top, #B0C4DE 0%, #ADD8E6 100%); color:#525151">
+                <i class="fa fa-user-o" aria-hidden="true"></i> User Account : @Session["User"] <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li>
-                    <a href="/User/EditUser"><i class="fa fa-smile-o" style="margin-right: 5px;" aria-hidden="true"></i> Profile</a>
+                    <a href="/User/EditUser"><i class="fa fa-user-md" style="margin-right: 5px;" aria-hidden="true"></i> Profile</a>
                 </li>
-                <li><a href="/Cart"><i class="fa fa-cart-plus" style="margin-right: 6px;" aria-hidden="true"></i>Cart</a></li>
+                <li><a href="/Cart"><i class="fa fa-shopping-cart" style="margin-right: 6px;" aria-hidden="true"></i>Cart</a></li>
                 <li>
                     <a href="/Cart/TrackingOder"><i class="fa fa-archive"></i> Order</a>
                 </li>
