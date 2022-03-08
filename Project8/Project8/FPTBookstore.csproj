@@ -670,30 +670,27 @@
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="images\bloc-sieu-dai.jpg" />
-    <Content Include="images\co-gai-dan-mach.jpg" />
-    <Content Include="images\combo-chao-con.jpg" />
+    <Content Include="images\A textbook of family medicine.jpg" />
+    <Content Include="images\background1.jpg" />
+    <Content Include="images\background2.jpg" />
+    <Content Include="images\background3.jpg" />
+    <Content Include="images\Becoming.jpg" />
+    <Content Include="images\Brown Bear, Brown Bear, What Do You See.jpg" />
+    <Content Include="images\Charlie and the Chocolate Factory.jpg" />
     <Content Include="images\combo1.jpg" />
     <Content Include="images\combo2.jpg" />
     <Content Include="images\combo3.jpg" />
-    <Content Include="images\con-duong-dan-den-su-giau-co.jpg" />
-    <Content Include="images\cu-binh-tinh.jpg" />
-    <Content Include="images\dam-lam-giau.jpg" />
-    <Content Include="images\den-khong-hat-bong.jpg" />
-    <Content Include="images\harrypotter.jpg" />
+    <Content Include="images\Deep Work.jpg" />
+    <Content Include="images\harry potter and the philosopher%27s stone.jpg" />
     <Content Include="images\icon_fb_2x.jpg" />
     <Content Include="images\icon_g_2x.jpg" />
+    <Content Include="images\IT.jpg" />
+    <Content Include="images\Life 3.0.jpg" />
     <Content Include="images\logo.jpg" />
-    <Content Include="images\luyen-thi-toeic.jpg" />
-    <Content Include="images\me-before-you.jpg" />
-    <Content Include="images\moi-buoi-sang-hay-tao-ra-mot-dieu-gi-do-moi-me.jpg" />
-    <Content Include="images\ngay-xua-co-mot-chuyen-tinh.jpg" />
-    <Content Include="images\nguoi-dep-ngu-va-con-thoi-ma-thuat.jpg" />
-    <Content Include="images\nha-dao-tao-sanh-soi.jpg" />
-    <Content Include="images\phat-trien-kha-nang-ngon-ngu.jpg" />
-    <Content Include="images\tam-tang-phap.jpg" />
+    <Content Include="images\One Hundred Years of Solitude.jpg" />
+    <Content Include="images\Steve Jobs.jpg" />
+    <Content Include="images\The Total Money Makeover.jpg" />
     <Content Include="images\topSach.png" />
-    <Content Include="images\viet-nam.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -1094,7 +1091,6 @@
     <Content Include="Areas\Admin\Views\Home\Order.cshtml" />
     <Content Include="Areas\Admin\Views\Home\DetailsOrder.cshtml" />
     <Content Include="EmailTemplate\Text.cshtml" />
-    <None Include="Properties\PublishProfiles\123.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -1154,6 +1150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
