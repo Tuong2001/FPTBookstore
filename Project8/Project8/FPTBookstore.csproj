@@ -1113,7 +1113,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ShowCategory.cshtml" />
@@ -1143,6 +1142,7 @@
     <Content Include="Views\User\ActivationNotice.cshtml" />
     <Content Include="Views\User\CheckActivationNotification.cshtml" />
     <Content Include="Views\Cart\TrackingOder.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -56,7 +56,7 @@ namespace FPTBookstore.Controllers
 		//GET : /Book/All : show all books in db
 		public ActionResult ShowAllBook(int? page)
 		{
-			//create the product variable on the page
+			//create the page size variable
 			int pageSize = 10;
 
 			//create the page number variable

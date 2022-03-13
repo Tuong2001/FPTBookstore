@@ -79,7 +79,14 @@ namespace FPTBookstore.Areas.Admin.Controllers
                     {
                         fileUpload.SaveAs(path);
                     }
-
+                    if (!string.Equals(fileName, "jpg", StringComparison.OrdinalIgnoreCase) &&
+                    !string.Equals(fileName, "png", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(fileName, "jpeg", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(fileName, "gif", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ViewBag.Alert = "Invalid file error";
+                        return View();
+                    }
                     //execute the image link to the cover image link
                     book.Image = fileName;
                     //do save to db
@@ -168,6 +175,14 @@ namespace FPTBookstore.Areas.Admin.Controllers
                     }
 
                     book.Image = fileName;
+                    if (!string.Equals(fileName, "jpg", StringComparison.OrdinalIgnoreCase) &&
+                   !string.Equals(fileName, "png", StringComparison.OrdinalIgnoreCase) &&
+                       !string.Equals(fileName, "jpeg", StringComparison.OrdinalIgnoreCase) &&
+                       !string.Equals(fileName, "gif", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ViewBag.Alert = "Invalid file error";
+                        return View(book);
+                    }
                     var result = new AdminProcess().UpdateBook(book);
                     if (result == 1)
                     {
@@ -331,7 +346,7 @@ namespace FPTBookstore.Areas.Admin.Controllers
                 //initialize object tg
                 var tg = new Author();
 
-                //gán dữ liệu
+                //assign data
                 tg.AuthorName = model.AuthorName;
                 tg.Hometown = model.Hometown;
                 tg.DateOfBirth = model.DateOfBirth;
