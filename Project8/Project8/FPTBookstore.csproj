@@ -191,7 +191,6 @@
     <Compile Include="Models\Data\Order_Ajax.cs" />
     <Compile Include="Models\Data\Customer.cs" />
     <Compile Include="Models\Data\Feedback.cs" />
-    <Compile Include="Models\Data\Publisher.cs" />
     <Compile Include="Models\Data\Book.cs" />
     <Compile Include="Models\Data\Author.cs" />
     <Compile Include="Models\Data\Category.cs" />
@@ -1026,16 +1025,13 @@
     <Content Include="Areas\Admin\Views\Home\ShowListBook.cshtml" />
     <Content Include="Areas\Admin\Views\Home\ShowListCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Home\ShowListAuthor.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\ShowListPublish.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AddBook.cshtml" />
     <Content Include="Areas\Admin\Views\Home\DetailsBook.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AddCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AddAuthor.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\AddPublish.cshtml" />
     <Content Include="Areas\Admin\Views\Home\UpdateBook.cshtml" />
     <Content Include="Areas\Admin\Views\Home\UpdateCategory.cshtml" />
     <Content Include="Areas\Admin\Views\Home\UpdateAuthor.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\UpdatePublish.cshtml" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />

@@ -9,7 +9,7 @@
 <p>
     @Html.ActionLink("Adding author", "AddAuthor") |
     @Html.ActionLink("Adding Category", "AddCategory") |
-    @Html.ActionLink("Adding Publisher", "AddPublish")
+   
 </p>
 @using (Html.BeginForm("AddBook", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
@@ -38,13 +38,6 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <label class="control-label col-md-2">Publisher</label>
-            <div class="col-md-10">
-                @Html.DropDownList("PublisherID", null, "Choose a publisher", new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.PublisherID, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
         <div class="form-group">
             <label class="control-label col-md-2">Author</label>

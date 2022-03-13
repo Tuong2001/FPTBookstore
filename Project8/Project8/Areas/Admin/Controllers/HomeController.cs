@@ -41,7 +41,6 @@ namespace FPTBookstore.Areas.Admin.Controllers
         {
             //get the code that displays the name
             ViewBag.CategoryID = new SelectList(db.Categories.ToList().OrderBy(x => x.CategoryName), "CategoryID", "CategoryName");
-            ViewBag.PublisherID = new SelectList(db.Publishers.ToList().OrderBy(x => x.PublisherName), "PublisherID", "PublisherName");
             ViewBag.AuthorID = new SelectList(db.Authors.ToList().OrderBy(x => x.AuthorName), "AuthorID", "AuthorName");
 
             return View();
@@ -53,7 +52,6 @@ namespace FPTBookstore.Areas.Admin.Controllers
         {
             //get the code that displays the name
             ViewBag.CategoryID = new SelectList(db.Categories.ToList().OrderBy(x => x.CategoryName), "CategoryID", "CategoryName");
-            ViewBag.PublisherID = new SelectList(db.Publishers.ToList().OrderBy(x => x.PublisherName), "PublisherID", "PublisherName");
             ViewBag.AuthorID = new SelectList(db.Authors.ToList().OrderBy(x => x.AuthorName), "AuthorID", "AuthorName");
 
             //check image upload
@@ -119,7 +117,6 @@ namespace FPTBookstore.Areas.Admin.Controllers
 
             // perform code retrieval but display the name and correct at the specified code and assign it to the ViewBag
             ViewBag.CategoryID = new SelectList(db.Categories.ToList().OrderBy(x => x.CategoryName), "CategoryID", "CategoryName", book.CategoryID);
-            ViewBag.PublisherID = new SelectList(db.Publishers.ToList().OrderBy(x => x.PublisherName), "PublisherID", "PublisherName", book.PublisherID);
             ViewBag.AuthorID = new SelectList(db.Authors.ToList().OrderBy(x => x.AuthorName), "AuthorID", "AuthorName", book.AuthorID);
 
             return View(book);
@@ -132,7 +129,6 @@ namespace FPTBookstore.Areas.Admin.Controllers
         {
             // do get the code but display the name right after the selected code and assign it to the ViewBag
             ViewBag.CategoryID = new SelectList(db.Categories.ToList().OrderBy(x => x.CategoryName), "CategoryID", "CategoryName", book.CategoryID);
-            ViewBag.PublisherID = new SelectList(db.Publishers.ToList().OrderBy(x => x.PublisherName), "PublisherID", "PublisherName", book.PublisherID);
             ViewBag.AuthorID = new SelectList(db.Authors.ToList().OrderBy(x => x.AuthorName), "AuthorID", "AuthorName", book.AuthorID);
 
             //If you don't change the cover photo, do it
@@ -407,106 +403,6 @@ namespace FPTBookstore.Areas.Admin.Controllers
             return RedirectToAction("ShowListAuthor");
         }
 
-        //Publish
-
-        //GET : /Admin/Home/ShowListPublish : publisher management page
-        [HttpGet]
-        public ActionResult ShowListPublish()
-        {
-            //call the function to output the publisher list
-            var model = new AdminProcess().ListAllPublish();
-
-            return View(model);
-        }
-
-        //GET : /Admin/Home/AddPublish : publisher management page
-        public ActionResult AddPublish()
-        {
-            return View();
-        }
-
-        //POST : /Admin/Home/AddPublish/:model : perform adding publisher
-        [HttpPost]
-        public ActionResult AddPublish(Publisher model)
-        {
-            //check data validity
-            if (ModelState.IsValid)
-            {
-                //initialize variable admin
-                var admin = new AdminProcess();
-
-                //initialize the publisher object
-                var nxb = new Publisher();
-
-                //assign data
-                nxb.PublisherName = model.PublisherName;
-                nxb.Address = model.Address;
-                nxb.Phone = model.Phone;
-
-                //call the function to add publisher
-                var result = admin.InsertPublish(nxb);
-                //test function
-                if (result > 0)
-                {
-                    ViewBag.Success = "Successfully added";
-                    ModelState.Clear();
-                    return View();
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Add failed.");
-                }
-            }
-
-            return View(model);
-        }
-
-        //GET : /Admin/Home/UpdatePublish/:id : page add publisher
-        [HttpGet]
-        public ActionResult UpdatePublish(int id)
-        {
-            //call the function to get the publisher code
-            var nxb = new AdminProcess().GetIdPublish(id);
-
-            return View(nxb);
-        }
-
-        //GET : /Admin/Home/UpdatePublish/:id : perform add publisher
-        [HttpPost]
-        public ActionResult UpdatePublish(Publisher nxb)
-        {
-            //check data validity
-            if (ModelState.IsValid)
-            {
-                //initialize variable admin
-                var admin = new AdminProcess();
-
-                //call publisher update function
-                var result = admin.UpdatePublish(nxb);
-                //test function
-                if (result == 1)
-                {
-                    ViewBag.Success = "Update successful";
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Update failed.");
-                }
-            }
-
-            return View(nxb);
-        }
-
-        //DELETE : Admin/Home/DeletePublish/:id : delete publisher
-        [HttpDelete]
-        public ActionResult DeletePublish(int id)
-        {
-            //call delete function publish function
-            new AdminProcess().DeletePublish(id);
-
-            //return publisher management page
-            return RedirectToAction("ShowListPublish");
-        }
 
         #endregion
 

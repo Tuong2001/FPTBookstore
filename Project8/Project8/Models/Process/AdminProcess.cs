@@ -89,15 +89,7 @@ namespace FPTBookstore.Models.Process
             return db.Authors.Find(id);
         }
 
-        /// <summary>
-        /// function get publisher code
-        /// </summary>
-        /// <param name="id">int</param>
-        /// <returns>Publisher</returns>
-        public Publisher GetIdPublish(int id)
-        {
-            return db.Publishers.Find(id);
-        }
+        
 
         /// <summary>
         /// Function to get customer code to visit
@@ -270,74 +262,8 @@ namespace FPTBookstore.Models.Process
         #endregion
 
 
-        //Publish : publisher
+       
 
-        #region publisher
-
-        /// <summary>
-        /// function to output publisher list
-        /// </summary>
-        /// <returns>List</returns>
-        public List<Publisher> ListAllPublish()
-        {
-            return db.Publishers.OrderBy(x => x.PublisherID).ToList();
-        }
-
-        /// <summary>
-        /// function to add publisher
-        /// </summary>
-        /// <param name="entity">Publisher</param>
-        /// <returns>int</returns>
-        public int InsertPublish(Publisher entity)
-        {
-            db.Publishers.Add(entity);
-            db.SaveChanges();
-            return entity.PublisherID;
-        }
-
-        /// <summary>
-        /// publisher update function
-        /// </summary>
-        /// <param name="entity">Publisher</param>
-        /// <returns>int</returns>
-        public int UpdatePublish(Publisher entity)
-        {
-            try
-            {
-                var nxb = db.Publishers.Find(entity.PublisherID);
-                nxb.PublisherName = entity.PublisherName;
-                nxb.Address = entity.Address;
-                nxb.Phone = entity.Phone;
-                db.SaveChanges();
-                return 1;
-            }
-            catch (Exception)
-            {
-                return 0;
-            }
-        }
-
-        /// <summary>
-        /// function to remove publisher
-        /// </summary>
-        /// <param name="id">int</param>
-        /// <returns>bool</returns>
-        public bool DeletePublish(int id)
-        {
-            try
-            {
-                var nxb = db.Publishers.Find(id);
-                db.Publishers.Remove(nxb);
-                db.SaveChanges();
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        #endregion
 
 
         //Books : book
@@ -376,7 +302,6 @@ namespace FPTBookstore.Models.Process
             {
                 var book = db.Books.Find(entity.BookID);
                 book.CategoryID = entity.CategoryID;
-                book.PublisherID = entity.PublisherID;
                 book.AuthorID = entity.AuthorID;
                 book.BookName = entity.BookName;
                 book.Price = entity.Price;

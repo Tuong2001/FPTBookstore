@@ -23,9 +23,6 @@
         [Required(ErrorMessage = "Please select category")]
         public int CategoryID { get; set; }
 
-        [Display(Name = "PublisherID")]
-        [Required(ErrorMessage = "Please select a publisher")]
-        public int PublisherID { get; set; }
 
         [Display(Name = "AuthorID")]
         [Required(ErrorMessage = "Please select an author")]
@@ -62,7 +59,6 @@
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
 
-        public virtual Publisher Publisher { get; set; }
 
         public virtual Category Category { get; set; }
 

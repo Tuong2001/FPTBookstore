@@ -18,7 +18,6 @@ namespace FPTBookstore.Models.Data
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Feedback> Feedbacks { get; set; }
-        public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Author> Authors { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
@@ -66,15 +65,6 @@ namespace FPTBookstore.Models.Data
             modelBuilder.Entity<Feedback>()
                 .Property(e => e.Phone)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<Publisher>()
-                .Property(e => e.Phone)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Publisher>()
-                .HasMany(e => e.Books)
-                .WithRequired(e => e.Publisher)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Book>()
                 .Property(e => e.Price)
