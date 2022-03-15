@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>E:\Website</_PublishTargetUrl>
-    <History>True|2022-03-14T13:09:35.7002059Z;False|2022-03-14T17:11:26.2616547+07:00;True|2022-03-11T08:32:28.9768965+07:00;True|2022-03-11T08:27:37.6701403+07:00;True|2022-03-10T21:28:17.6803224+07:00;True|2022-03-10T21:15:52.3689291+07:00;True|2022-03-10T20:25:20.3350798+07:00;True|2022-03-09T15:32:14.0569225+07:00;False|2022-03-09T15:29:52.6859734+07:00;False|2022-03-09T15:29:35.3317645+07:00;</History>
+    <History>True|2022-03-15T00:26:37.1733134Z;True|2022-03-14T20:09:35.7002059+07:00;False|2022-03-14T17:11:26.2616547+07:00;True|2022-03-11T08:32:28.9768965+07:00;True|2022-03-11T08:27:37.6701403+07:00;True|2022-03-10T21:28:17.6803224+07:00;True|2022-03-10T21:15:52.3689291+07:00;True|2022-03-10T20:25:20.3350798+07:00;True|2022-03-09T15:32:14.0569225+07:00;False|2022-03-09T15:29:52.6859734+07:00;False|2022-03-09T15:29:35.3317645+07:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -141,10 +141,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/03/2022 16:05:05</publishTime>
     </File>
     <File Include="bin/Project8.dll">
-      <publishTime>03/14/2022 20:10:06</publishTime>
+      <publishTime>03/15/2022 11:11:29</publishTime>
     </File>
     <File Include="bin/Project8.pdb">
-      <publishTime>03/14/2022 20:10:06</publishTime>
+      <publishTime>03/15/2022 11:11:29</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>03/03/2022 16:05:02</publishTime>
@@ -2719,6 +2719,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="images/Becoming.jpg">
       <publishTime>03/05/2022 06:19:20</publishTime>
+    </File>
+    <File Include="images/Beloved.jpg">
+      <publishTime>03/15/2022 10:12:03</publishTime>
     </File>
     <File Include="images/Brown Bear, Brown Bear, What Do You See.jpg">
       <publishTime>03/04/2022 16:15:02</publishTime>

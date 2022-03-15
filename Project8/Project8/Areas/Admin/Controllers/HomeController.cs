@@ -79,12 +79,13 @@ namespace FPTBookstore.Areas.Admin.Controllers
                     {
                         fileUpload.SaveAs(path);
                     }
-                    if (!string.Equals(fileName, "jpg", StringComparison.OrdinalIgnoreCase) &&
-                    !string.Equals(fileName, "png", StringComparison.OrdinalIgnoreCase) &&
-                        !string.Equals(fileName, "jpeg", StringComparison.OrdinalIgnoreCase) &&
-                        !string.Equals(fileName, "gif", StringComparison.OrdinalIgnoreCase))
+                    var postedFileExtension = Path.GetExtension(fileUpload.FileName);
+                    if (!string.Equals(postedFileExtension, ".jpg", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".png", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".gif", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".jpeg", StringComparison.OrdinalIgnoreCase))
                     {
-                        ViewBag.Alert = "Invalid file error";
+                        ViewBag.Alert = "Invalid file or image error";
                         return View();
                     }
                     //execute the image link to the cover image link
@@ -175,12 +176,13 @@ namespace FPTBookstore.Areas.Admin.Controllers
                     }
 
                     book.Image = fileName;
-                    if (!string.Equals(fileName, "jpg", StringComparison.OrdinalIgnoreCase) &&
-                   !string.Equals(fileName, "png", StringComparison.OrdinalIgnoreCase) &&
-                       !string.Equals(fileName, "jpeg", StringComparison.OrdinalIgnoreCase) &&
-                       !string.Equals(fileName, "gif", StringComparison.OrdinalIgnoreCase))
+                    var postedFileExtension = Path.GetExtension(fileUpload.FileName);
+                    if (!string.Equals(postedFileExtension, ".jpg", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".png", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".gif", StringComparison.OrdinalIgnoreCase) &&
+                        !string.Equals(postedFileExtension, ".jpeg", StringComparison.OrdinalIgnoreCase))
                     {
-                        ViewBag.Alert = "Invalid file error";
+                        ViewBag.Alert = "Invalid file or image error";
                         return View(book);
                     }
                     var result = new AdminProcess().UpdateBook(book);
